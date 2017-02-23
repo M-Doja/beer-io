@@ -13,8 +13,7 @@ var routes = require('./router/index');
 
 
 // MongoDB Production Connection
-mongoose.connect("mongodb://io-UBeerDB:u02faded@ds161209.mlab.com:61209/beer-io", function(err) {
-// mongoose.connect("mongodb://localhost:27017/io-UBeer", function(err) {
+mongoose.connect("mongodb://localhost:27017/io-UBeer", function(err) {
 // mongoose.connect(process.env.MONGOLAB_URI, function(err) {
   if (err) {
     return console.log("Error database");
