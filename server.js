@@ -17,7 +17,6 @@ mongoose.connect("mongodb://io-UBeerDB:u02faded@ds161209.mlab.com:61209/beer-io"
 // mongoose.connect("mongodb://localhost:27017/io-UBeer", function(err) {
 // mongoose.connect(process.env.MONGOLAB_URI, function(err) {
   if (err) {
-    console.log(process.env.MONGOLAB_URI);
     return console.log("Error database");
   }
   console.log("Database Connected Ok!!!");
