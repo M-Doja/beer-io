@@ -19,7 +19,7 @@ mongoose.connect("mongodb://localhost:27017/io-UBeer", function(err) {
     console.log(process.env.MONGOLAB_URI);
     return console.log("Error database");
   }
-  console.log("Database Connected");
+  console.log("Database Connected Ok!!!");
 });
 
 const db = mongoose.connection;

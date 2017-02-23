@@ -10,7 +10,7 @@ router.get('/profile', mid.requiresLogin, function(req, res, next) {
         if (error) {
           return next(error);
         } else {
-          return res.render('profile', { title: 'Profile', name: user.name, favorite: user.favoriteBook });
+          return res.render('profile', { title: 'Profile', name: user.name, favorite: user.favoriteBeer });
         }
       });
 });
@@ -64,7 +64,8 @@ router.post('/register', function(req, res, next) {
   if (
     req.body.email &&
     req.body.name &&
-    req.body.favoriteBook &&
+    req.body.favoriteBeer &&
+    req.body.beerType &&
     req.body.password &&
     req.body.confirmPassword
   ) {
@@ -80,7 +81,8 @@ router.post('/register', function(req, res, next) {
       var userData = {
         email: req.body.email,
         name: req.body.name,
-        favoriteBook: req.body.favoriteBook,
+        favoriteBeer: req.body.favoriteBeer,
+        beerType: req.body.beerType,
         password: req.body.password
       };
 
