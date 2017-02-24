@@ -9,10 +9,7 @@ const MongoStore = require('connect-mongo')(session);
 const app = express();
 var routes = require('./router/index');
 
-// MongoDB localhost Connection
-
-
-// MongoDB Production Connection
+// MongoDB Connection
 mongoose.connect("mongodb://localhost:27017/io-UBeer", function(err) {
 // mongoose.connect(process.env.MONGOLAB_URI, function(err) {
   if (err) {
